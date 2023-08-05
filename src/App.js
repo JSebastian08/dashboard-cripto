@@ -10,7 +10,7 @@ import Footer from './Footer'
 function App(){
 
   // Estados de la Appi //
-const [conins, setCoins] = useState()
+const [coins, setCoins] = useState()
 const [currency, setCurrency] = useState()
 const [selCur, setSelCur] = useState('usd')
 
@@ -69,7 +69,7 @@ return(
       </div>
     </main>
     <Convert />
-    <TableCoins coins={conins} />
+    <TableCoins coins={coins} />
     <Footer />
   </div>
   )
