@@ -7,7 +7,7 @@ import Convert from './Convert'
 import TableCoins from './Tablecoins'
 import Footer from './Footer'
 
-function App(): "Cargando" | Element{
+function App(){
 
   // Estados de la Appi //
 const [conins, setCoins] = useState()
@@ -15,7 +15,7 @@ const [currency, setCurrency] = useState()
 const [selCur, setSelCur] = useState('usd')
 
 // Llamado de la Appi//
-const getData = async () : Promise<void> => {
+const getData = async () => {
   const response = await fetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${selCur}&order=market_cap_desc&per_page=4&page=1&sparkline=false`
 
@@ -33,12 +33,12 @@ const getData = async () : Promise<void> => {
 }
 
 //Este useEffect sirven para cargar la aplicacion cuando surgen cambios en los componentes//
-useEffect(() : void => {
+useEffect(()  => {
   getData()
 }, [])
 
 //Este useEffect sirve para ejecutar cuando se selecciona una divisa//
-useEffect(() : void =>  {
+useEffect(() =>  {
   getData()
 }, [selCur])
 
@@ -56,7 +56,7 @@ return(
             image,
             current_price,
             price_change_percentage_30d_in_currency,
-          }, index) : Element | undefined => {
+          }, index) => {
             if(index != 0){
               return <Card  key={index} price={`${symbol} -
               ${current_price} ${selCur} `} porcentaje = 
@@ -80,13 +80,13 @@ return(
 export default App;
 
 //Funcion para leer los decimales de la Appi//
-export function deleteDec(val decimal) : any {
+export function deleteDec(val, decimal) {
   return val.toFixed(decimal);
 }
 
 //Funicion para el tema del color de la parte del grafico y la informacion de la moneda//
 
-export function colorDec(num) : "green" | "red" {
+export function colorDec(num) {
   return num > 0 ? "green" : "red" ;
 }
 
