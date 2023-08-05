@@ -14,7 +14,7 @@ export default function CardPrincipal({json:{id, simbol, current_price, image,
                 <div>
                     <img src={image} alt="Icono de la cripto" />
                     <h2>Nombre de la Cripto - USD - %</h2>
-                    <h2><Faplay /></h2>
+                    <h2><FaPlay /></h2>
                 </div>
 
                 <div className="graphic">
