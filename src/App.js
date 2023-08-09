@@ -4,7 +4,7 @@ import Header from './Header'
 import CardPrincipal from './CardPrincipal.jsx';
 import Card from './Card'
 import Convert from './Convert'
-import TableCoins from './Tablecoins'
+import TableCoins from './TableCoins'
 import Footer from './Footer'
 
 function App(){
