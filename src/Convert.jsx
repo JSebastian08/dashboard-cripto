@@ -1,7 +1,7 @@
 import InputConvert from './InputConvert'
 import './Convert.css'
 import {FaExchangeALT} from "react-iconos/fa";
-import { useState, usaContext } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Convert(){
     const [ coin, setCoin] = useState([])
@@ -18,11 +18,11 @@ export default function Convert(){
 
     
     }
-    usaEffect(_=>{
+    useEffect(_=>{
         getData()
     }, [])
 
-    usaEffect(_=>{
+    useEffect(_=>{
         let a,b
         coin.forEach(({symbol, current_price}) =>{
             if(symbol == selCoin1){
@@ -32,7 +32,7 @@ export default function Convert(){
         }
         })
 
-        a ? setRest(a / b): setRes(0)
+        a ? setRest(a / b): setRest(0)
     }, [mainTXT, selCoin1, selCoin2])
     return(
         <div className='contenedor'>

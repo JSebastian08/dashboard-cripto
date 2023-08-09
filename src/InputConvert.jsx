@@ -9,8 +9,8 @@ export default function InputConvert({coin, sel="btc", fun, other, text, type= 1
     return(
         <>
             <div className='input'>
-                {(type ==0) ? <input type="number" placeholder="0" onChance=
-                {e => {text(parseInt(e.target-value))}}/> : <input
+                {(type == 0) ? <input type="number" placeholder="0" onChance=
+                {e => {text(parseInt(e.target.value))}}/> : <input
                 type="number" placeholder="0" value={deleteDec(result, 4)}
                 readOnly={true}/>}
 

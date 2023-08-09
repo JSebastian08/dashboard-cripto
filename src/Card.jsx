@@ -1,4 +1,5 @@
 import './Card.css'
+import { colorDec } from './App'
 export default function Card({price, porcentaje, img, coinId, cur}){
     return(
         <div className="card">
