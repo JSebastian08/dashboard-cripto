@@ -1,4 +1,4 @@
-import '.CardPrincipal.css'
+import './CardPrincipal.css'
 import {FaPlay} from "react-icons/fa";
 import { deleteDec, colorDec } from './App';
 

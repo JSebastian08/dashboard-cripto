@@ -1,7 +1,7 @@
 import InputConvert from './InputConvert'
 import './Convert.css'
-import {FaExchangeALT} from "react-iconos/fa";
-import { useState, useEffect } from 'react';
+import {FaExchangeALT} from "react-icons/fa";
+import { useState, useEffect } from 'react'
 
 export default function Convert(){
     const [ coin, setCoin] = useState([])
